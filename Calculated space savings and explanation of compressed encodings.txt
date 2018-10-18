@@ -1,0 +1,14 @@
+Savings = binary count - character count
+
+Gadsby.txt (encoding file, first encoding) Space savings: 
+character count: 1697928	 binary count: 1340832
+Savings (Relative efficiency): 357096
+
+Dictionary_rev.txt (encoding file (second encoding) Space savings:
+character count: 1697928	 binary count: 1371299
+Savings (Relative efficiency): 326629
+
+
+Explanation of compressed encodings: 
+The compressed encodings in the main method vary in relative efficiency because they are each based on different encoding files. The first file is based on "Gadsby.txt", which does not contain the letter e. This means that the paths in the huffman tree for this encoding are shorter in length, so the overall binary count for the output text file is shorter than that of the second encoding. For the second encoding, it is based on Dictionary_Rev.txt, which is considerably longer in length and includes the letter e. This means that the Huffman tree for the second encoding is larger and has longer paths to the root nodes, so the codes for each character have more bits on average. This makes the output text for the second encoding longer and contain more 0's and 1's, which makes the savings less efficient than the first encoding. Thus, the compressed size for the first encoding is smaller than the compressed size for the second encoding. 
+
